@@ -10,6 +10,7 @@ This shell works just like running an JS app generated from the tool.  Run `npm 
 * Clone the repo to your machine.
 * Navigate to the repo.
 * Run `npm install` to install the dependencies.
+* Transpile TypeScript to JavaScript by running `tsc`.
 * Run `npm start` to run the web server.
 
 Now, code away in TypeScript!
