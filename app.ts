@@ -6,7 +6,7 @@ import bodyParser = require('body-parser');
 import debug = require('debug');
 import http = require('http');
 
-import { Routes } from "./routes";
+import * as Routes from "./routes";
 
 export class App{
     //Express instance
