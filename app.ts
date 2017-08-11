@@ -6,7 +6,7 @@ import bodyParser = require('body-parser');
 import debug = require('debug');
 import http = require('http');
 
-import { Routes } from "./routes/routes";
+import { Routes } from "./routes";
 
 export class App{
     //Express instance
@@ -24,14 +24,14 @@ export class App{
         App.express.set('view engine', 'pug');
 
         // uncomment after placing your favicon in /public
-        //express.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+        //App.express.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
         App.express.use(logger('dev'));
         App.express.use(bodyParser.json());
         App.express.use(bodyParser.urlencoded({ extended: false }));
         App.express.use(cookieParser());
         App.express.use(express.static('./public'));
 
-        App.express.use('/', Routes.index());
+        App.express.use('/', Routes.Index.get());
 
         // catch 404 and forward to error handler
         App.express.use(function(req:any, res:any, next:any) {
